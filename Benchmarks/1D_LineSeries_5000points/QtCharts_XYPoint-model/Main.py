@@ -38,5 +38,5 @@ for x in range(5000):
 
 content = content.replace("XYPoint { x: 0; y: 0 }", s)
 
-with open("1D_line-plot_5000-points-with-XYPoint.qml", 'w') as f:
+with open("Main.qml", 'w') as f:
     f.write(content)
