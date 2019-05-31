@@ -36,5 +36,5 @@
 
 * **useOpenGL: true** significantly speeds up LineSeries with data added via **append** method. Performance  becomes comparable to the **XYPoint** method of adding data!
 * **useOpenGL: true** doesn't influences performance, when data are added via **XYPoint** method
-* performance is not influenced by the coordinates precision
+* performance is not influenced by the precision in coordinates
 
