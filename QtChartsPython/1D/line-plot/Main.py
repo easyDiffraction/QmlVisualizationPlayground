@@ -6,6 +6,8 @@ from PySide2.QtGui import QStandardItem, QStandardItemModel
 from PySide2.QtQml import QQmlApplicationEngine
 from PySide2.QtWidgets import QApplication
 
+#https://stackoverflow.com/questions/48687705/how-to-use-the-vxymodelmapper-with-qstandarditemmodel
+
 if __name__ == '__main__':
     # create application
     app = QApplication(sys.argv)
