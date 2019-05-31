@@ -1,6 +1,4 @@
-# QtChartsPlayground
-
-## Visualization Libraries for QML
+# Visualization Libraries for QML
 
 * QtCharts
 * QtDataVisualization
