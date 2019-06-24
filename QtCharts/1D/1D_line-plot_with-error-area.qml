@@ -8,7 +8,7 @@ ChartView {
     legend.visible: false
     title: "A 1D line plot with error area"
 
-    property int nMax: 300
+    property int nMax: 50
 
     ValueAxis {
         id: commonAxisX
