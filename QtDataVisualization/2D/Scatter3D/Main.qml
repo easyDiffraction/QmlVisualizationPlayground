@@ -34,10 +34,8 @@ Window {
         ColorGradientStop { position: 1.00; color: "#FDE725" }
     }
 
-    Surface3D {
+    Scatter3D {
         anchors.fill: parent
-
-
 
         theme: Theme3D {
             type: Theme3D.ThemeQt
@@ -48,14 +46,14 @@ Window {
             gridEnabled: true
             gridLineColor: "grey"
 
+            font.pointSize: 50
+
             labelBorderEnabled: false
             //labelBackgroundEnabled: false
             labelTextColor: "black"
 
             backgroundEnabled: false
             windowColor: "white"
-
-            font.pointSize: 32
         }
 
         axisX: ValueAxis3D {
@@ -78,16 +76,18 @@ Window {
         orthoProjection: true
         scene.activeCamera.cameraPreset: Camera3D.CameraPresetDirectlyAbove
 
-        Surface3DSeries {
-            baseGradient: viridisGradient
+        Scatter3DSeries {
             colorStyle: Theme3D.ColorStyleRangeGradient
-            drawMode: Surface3DSeries.DrawSurface
+            baseGradient: viridisGradient
 
-            ItemModelSurfaceDataProxy {
+            itemSize: 6 / Math.max(xMax, yMax)
+            mesh: Abstract3DSeries.MeshCube
+
+            ItemModelScatterDataProxy {
                 itemModel: ListModel { id: dataModel }
-                columnRole: "x"
-                rowRole: "y"
+                xPosRole: "x"
                 yPosRole: "intensity"
+                zPosRole: "y"
             }
         }
     }

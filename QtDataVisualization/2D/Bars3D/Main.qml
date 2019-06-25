@@ -65,7 +65,7 @@ Window {
         rowAxis: CategoryAxis3D {
             title: "y coordinate"
             titleVisible: true
-            labels: [""]
+            labels: ["", "1", "", "", "", 5]
         }
 
         valueAxis: ValueAxis3D {
