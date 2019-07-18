@@ -1,0 +1,1 @@
+https://blog.qt.io/blog/2013/11/07/qt-data-visualization-technology-preview-and-charts-1-3-1-release/
