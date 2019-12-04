@@ -11,12 +11,13 @@ Item {
 
         LineSeries {
             id: dataPoints
+            //useOpenGL: true
         }
 
         Component.onCompleted: {
             const startTime = Date.now()
 
-            for (let i = 0, nMax = 2000; i < nMax; i++) {
+            for (let i = 0, nMax = 5000; i < nMax; i++) {
                 dataPoints.append(i/nMax, Math.random())
             }
 

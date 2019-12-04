@@ -18,8 +18,10 @@ if __name__ == '__main__':
     engine = QQmlApplicationEngine(QUrl.fromLocalFile(os.path.join(os.path.dirname(sys.argv[0]), "Main.qml")))
 
     # create model for plot
+    print("1:", datetime.now() - timeNow)
     nMax = 5000
     dataModel = QStandardItemModel(nMax+1, 2) # nMax+1 rows and 2 columns
+    dataModel.blockSignals(True)
     for row in range(dataModel.rowCount()):
         item1 = QStandardItem()
         item2 = QStandardItem()
@@ -27,6 +29,9 @@ if __name__ == '__main__':
         item2.setData(random.random(), Qt.DisplayRole)
         dataModel.setItem(row, 0, item1)
         dataModel.setItem(row, 1, item2)
+    dataModel.blockSignals(False)
+    dataModel.layoutChanged.emit()
+    print("2:", datetime.now() - timeNow)
 
     # register model for access from qml
     engine.rootContext().setContextProperty("dataModel", dataModel);

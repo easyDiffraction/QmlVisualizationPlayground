@@ -10,10 +10,12 @@ Window {
     ChartView {
         anchors.fill: parent
         legend.visible: false
+        antialiasing: true
 
         LineSeries{
             id: dataPoints
-            //useOpenGL: true
+            useOpenGL: true
+            color: "red"
         }
 
         VXYModelMapper {
